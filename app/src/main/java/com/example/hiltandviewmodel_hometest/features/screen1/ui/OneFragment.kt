@@ -28,9 +28,12 @@ class OneFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val action =
+            OneFragmentDirections.actionOneFragmentToTwoFragment(fromOneFragment = viewModel.getData())
+
         val btnNavigate =
             view.findViewById<Button>(R.id.btn_navigate_twoFragment).setOnClickListener {
-                findNavController().navigate(R.id.twoFragment)
+                findNavController().navigate(action)
             }
 
         val textView =

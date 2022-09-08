@@ -9,10 +9,20 @@
         android:id="@+id/oneFragment"
         android:name="com.example.hiltandviewmodel_hometest.features.screen1.ui.OneFragment"
         android:label="fragment_one"
-        tools:layout="@layout/fragment_one" />
+        tools:layout="@layout/fragment_one">
+        <action
+            android:id="@+id/action_oneFragment_to_twoFragment"
+            app:destination="@id/twoFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/twoFragment"
         android:name="com.example.hiltandviewmodel_hometest.features.screen2.ui.TwoFragment"
         android:label="fragment_two"
-        tools:layout="@layout/fragment_two" />
+        tools:layout="@layout/fragment_two">
+
+        <argument
+            android:name="fromOneFragment"
+            app:argType="string" />
+    </fragment>
 </navigation>
