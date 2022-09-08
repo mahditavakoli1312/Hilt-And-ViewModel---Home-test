@@ -11,5 +11,5 @@ import dagger.hilt.components.SingletonComponent
 abstract class OneSreenModuls {
 
     @Binds
-    abstract fun getOneSceenRepo(oneFragmentRepo: OneFragmentRepoImpl): OneFragmentRepository
+    abstract fun bindOneSceenRepo(oneFragmentRepo: OneFragmentRepoImpl): OneFragmentRepository
 }
